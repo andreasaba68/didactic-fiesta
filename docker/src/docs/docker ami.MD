@@ -48,6 +48,31 @@ docker container run -it alpine:3.9.3
 vi /etc/apk/repositories
 3) [better not to]can I use my containers jdk / maven [/ git] and install those in my containers ?
 
+~ $ apk info -vv | grep 'j'
+java-cacerts-1.0-r0 - Script to update java cacerts store
+openjdk8-jre-lib-8.201.08-r0 - OpenJDK 8 Java Runtime (class libraries)
+java-common-0.1-r0 - Java common (updates java links)
+openjdk8-jre-base-8.201.08-r0 - OpenJDK 8 Java Runtime (no GUI support)
+openjdk8-jre-8.201.08-r0 - OpenJDK 8 Java Runtime
+maven-3.3.9-r1 - A Java project management and project comprehension tool.
+
+openjdk9-jre-headless-9.0.4_p12-r0 - Oracle OpenJDK 9 (JRE headless)
+openjdk9-jre-9.0.4_p12-r0 - Oracle OpenJDK 9 (JRE)
+openjdk9-jdk-9.0.4_p12-r0 - Oracle OpenJDK 9 (JDK)
+
+
+jq-1.5-r4 - A lightweight and flexible command-line JSON processor
+java-common-0.1-r0 - Java common (updates java links)
+java-cacerts-1.0-r0 - Script to update java cacerts store
+libelf-0.8.13-r3 - libelf is a free ELF object file access library
+openjdk9-jre-headless-9.0.4_p12-r0 - Oracle OpenJDK 9 (JRE headless)
+libjpeg-turbo-2.0.2-r0 - Accelerated baseline JPEG compression and decompression library
+openjdk9-jre-9.0.4_p12-r0 - Oracle OpenJDK 9 (JRE)
+openjdk9-jdk-9.0.4_p12-r0 - Oracle OpenJDK 9 (JDK)
+
+
+
+
 
 mkdir ../helloworld9
 cd ../helloworld9/
