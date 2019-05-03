@@ -1,7 +1,5 @@
 #cd ~/didactic-fiesta/docker/src/docker
 
-mvn archetype:generate -DgroupId=org.examples.java -DartifactId=helloworld -DinteractiveMode=false
-
 cd helloworld
 mvn package
 
