@@ -12,3 +12,5 @@ RUN apk add openjdk9-jre
 # Set up env variables
 ENV JAVA_HOME=/usr/lib/jvm/java-9-openjdk
 ENV PATH=$PATH:$JAVA_HOME/bin
+
+CMD ["/bin/echo", "hello world"]
