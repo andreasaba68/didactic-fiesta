@@ -1,4 +1,5 @@
-#do the following
+#do the following:
+
 #vi './005 init.sh'
 #paste the content below
 
@@ -9,7 +10,7 @@
 #. './005 init.sh'
 #exit
 #. /etc/profile.d/java.sh
-#. '006\ init2.sh'
+#. '006 init2.sh'
 
 echo 'http://dl-cdn.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories; \
 echo 'http://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories; \
@@ -22,6 +23,7 @@ apk add openjdk9-jdk
 #NO apk add maven as it adds jdk 8 dependency
 wget http://it.apache.contactlab.it/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
 tar -xzvf apache-maven-3.6.1-bin.tar.gz -C /usr/lib
+rm -f apache-maven-3.6.1-bin.tar.gz
 
 echo 'export M2_HOME=/usr/lib/apache-maven-3.6.1' > /etc/profile.d/java.sh; \
 echo 'export JAVA_HOME=/usr/lib/jvm/java-9-openjdk' >> /etc/profile.d/java.sh; \
