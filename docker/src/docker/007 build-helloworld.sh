@@ -3,4 +3,4 @@
 cd helloworld
 mvn package
 
-docker build --tag=alpinejavatest --file '../015 helloworld.Dockerfile' .
+docker build . --tag=alpinejavatest --file '../015 helloworld.Dockerfile'
