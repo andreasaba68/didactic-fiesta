@@ -44,17 +44,9 @@ tmpfs                   495.4M         0    495.4M   0% /sys/firmware
 ===
 1) Choose a pure alpine latest contaier
 2) open an interactive session and see what's in (particularly in terms of repositories)
-3) can I use my containers jdk / maven [/ git] and install those in my containers ?
-
 docker container run -it alpine:3.9.3
-
-cd ../helloworld/
-vi ./Dockerfile
---------
---------
-
-docker build --tag=alpinejavatest .
-docker run alpinejavatest
+vi /etc/apk/repositories
+3) [better not to]can I use my containers jdk / maven [/ git] and install those in my containers ?
 
 
 mkdir ../helloworld9
