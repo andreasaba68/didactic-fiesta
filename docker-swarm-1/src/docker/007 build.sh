@@ -11,8 +11,8 @@ docker build . --tag=alpinejavaswarm --file './src/docker/015 docker-swarm.Docke
 
 # *** Creating the services, ~/data is needed for visualizer service
 docker swarm init
-mkdir ~/data
 
 docker stack deploy -c './src/docker/070 docker-compose.yml' dockerswarm1
 
 docker service update --publish-add published=8080,target=8080 dockerswarm1_visualizer
+docker service update --publish-add published=8081,target=8081 dockerswarm1_web
