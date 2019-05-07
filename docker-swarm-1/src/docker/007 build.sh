@@ -15,4 +15,4 @@ mkdir ~/data
 
 docker stack deploy -c './src/docker/070 docker-compose.yml' dockerswarm1
 
-docker service update --publish-add published=8080,target=8080 dockerswarm1
+docker service update --publish-add published=8080,target=8080 dockerswarm1_visualizer
