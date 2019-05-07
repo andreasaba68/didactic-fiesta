@@ -18,20 +18,14 @@ BUG_REPORT_URL="http://bugs.alpinelinux.org"
 ~ $ df -h
 Filesystem                Size      Used Available Use% Mounted on
 overlay                  19.7G   1016.7M     17.7G   5% /
+shm                      64.0M         0     64.0M   0% /dev/shm
 tmpfs                    64.0M         0     64.0M   0% /dev
 tmpfs                   495.4M         0    495.4M   0% /sys/fs/cgroup
-shm                      64.0M         0     64.0M   0% /dev/shm
-/dev/xvdb1               19.7G   1016.7M     17.7G   5% /var/log
+tmpfs                    99.1M    368.0K     98.7M   0% /var/run/docker.sock
 tmpfs                   495.4M    219.2M    276.1M  44% /etc/group
 tmpfs                   495.4M    219.2M    276.1M  44% /etc/shadow
-/dev/xvdb1               19.7G   1016.7M     17.7G   5% /etc/ssh
 tmpfs                   495.4M    219.2M    276.1M  44% /home/docker
 tmpfs                   495.4M    219.2M    276.1M  44% /etc/passwd
-/dev/xvdb1               19.7G   1016.7M     17.7G   5% /etc/hosts
-/dev/xvdb1               19.7G   1016.7M     17.7G   5% /etc/hostname
-/dev/xvdb1               19.7G   1016.7M     17.7G   5% /etc/resolv.conf
-tmpfs                    99.1M    368.0K     98.7M   0% /var/run/docker.sock
-/dev/xvdb1               19.7G   1016.7M     17.7G   5% /var/etc/docker
 tmpfs                   495.4M    219.2M    276.1M  44% /usr/bin/docker
 tmpfs                   495.4M         0    495.4M   0% /proc/acpi
 tmpfs                    64.0M         0     64.0M   0% /proc/kcore
@@ -40,6 +34,13 @@ tmpfs                    64.0M         0     64.0M   0% /proc/timer_list
 tmpfs                    64.0M         0     64.0M   0% /proc/sched_debug
 tmpfs                   495.4M         0    495.4M   0% /proc/scsi
 tmpfs                   495.4M         0    495.4M   0% /sys/firmware
+
+/dev/xvdb1               19.7G   1016.7M     17.7G   5% /etc/ssh
+/dev/xvdb1               19.7G   1016.7M     17.7G   5% /etc/hosts
+/dev/xvdb1               19.7G   1016.7M     17.7G   5% /etc/hostname
+/dev/xvdb1               19.7G   1016.7M     17.7G   5% /etc/resolv.conf
+/dev/xvdb1               19.7G   1016.7M     17.7G   5% /var/log
+/dev/xvdb1               19.7G   1016.7M     17.7G   5% /var/etc/docker
 
 ===
 1) Choose a pure alpine latest contaier

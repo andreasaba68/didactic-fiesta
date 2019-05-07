@@ -6,14 +6,14 @@
 #vi './005 init.sh'
 #paste the content below
 
-#vi './006 init2.sh'
+#vi './006 init-git.sh'
 #paste the content within the script
 
 #sudo su
 #. './005 init.sh'
 #exit
 #. /etc/profile.d/java.sh
-#. '006 init2.sh'
+#. '006 init-git.sh'
 
 echo 'http://dl-cdn.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories; \
 echo 'http://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories; \
