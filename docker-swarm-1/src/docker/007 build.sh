@@ -17,7 +17,7 @@ docker stack deploy -c './src/docker/070 docker-compose.yml' dockerswarm1
 #docker run -p 8081:8081 alpinejavaswarm
 #docker swarm join --token SWMTKN-1-1j3x29v9ollequal9t75xbo8wo40q8d7mnwle274ezfj6fb8ah-azvnw0tvhaturqlxulyltpfy7 192.168.43.27:2377
 docker container ls
-docker exec -ti dockerswarm1_web.2.0lkegmhi381flacm2j36gzjz9 /bin/ash
+docker exec -ti dockerswarm1_web.1.g1a4m6qpyotlkx7utq5k2361u /bin/ash
 
 #sudo apk add docker-compose
 #source https://wiki.alpinelinux.org/wiki/Docker#Docker_Compose

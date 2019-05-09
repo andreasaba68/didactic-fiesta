@@ -8,7 +8,7 @@ services:
       replicas: 2
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.5"
           memory: 150M
       restart_policy:
         condition: on-failure
@@ -18,6 +18,8 @@ services:
     image: dockersamples/visualizer:stable
     ports:
       - "8080:8080"
+    deploy:
+      replicas: 1
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     deploy:
