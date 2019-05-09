@@ -20,5 +20,15 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 
 =============
 
+Swarm initialized: current node (fezze76ac6jonq86rfedhbqld) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3qwthcjl8rlwlalwvj3ptszusht9ud4mtzx0sxbst4fo5908yf-4q4b0kl38dbbabe2t8eohwpwz 172.31.18.148:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+
+
 docker run -it alpinejavaswarm
 
