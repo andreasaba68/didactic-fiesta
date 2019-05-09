@@ -7,6 +7,16 @@ To add a worker to this swarm, run the following command:
 
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 
+=============
+
+alpine-vbox:~/didactic-fiesta/docker-swarm-1$ docker swarm init
+Swarm initialized: current node (jof3u3jgpwycfwhmdlrj61htr) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-4502rogedkrhc2gc1ki3f3a1n8h5i4zgq40emxj3wuxrv3rkb8-c2sklbax01up1sl5m8jxfe6hr 192.168.43.27:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 
 =============
 
