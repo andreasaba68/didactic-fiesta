@@ -40,3 +40,8 @@ mvn test -Dtest=DockerSwarm1ApplicationTests2#testDeployedOn2NodesClusterWOSessi
 
 #docker service update --publish-add published=8080,target=8080 dockerswarm1_visualizer
 #docker service update --publish-add published=8081,target=8081 dockerswarm1_web
+
+#docker container ls
+#docker exec -ti xenodochial_borg ifconfig
+curl -4 http://172.17.0.6:8081/session/write?test=pioppino
+
