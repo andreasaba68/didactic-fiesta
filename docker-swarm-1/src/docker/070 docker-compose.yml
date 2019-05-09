@@ -2,6 +2,8 @@ version: "3"
 services:
   web:
     image: alpinejavaswarm:latest
+    ports:
+      - "8081:8081"
     deploy:
       replicas: 2
       resources:
@@ -10,8 +12,6 @@ services:
           memory: 150M
       restart_policy:
         condition: on-failure
-    ports:
-      - "8081:8081"
     networks:
       - webnet
   visualizer:
