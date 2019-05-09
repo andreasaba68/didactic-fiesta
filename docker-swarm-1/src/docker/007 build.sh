@@ -27,6 +27,10 @@ curl -4 http://ip-172-31-11-127.sa-east-1.compute.internal:8081/session/write?te
 curl -4 http://Docker-ExternalLoa-8L1FZ6572MMM-2059149846.sa-east-1.elb.amazonaws.com/session/write?test=pioppino
 
 
+mvn test -Dtest=DockerSwarm1ApplicationTests2#testDeployedOn2NodesClusterWOSessionStickness -DbaseUrl=http://ip-172-31-11-127.sa-east-1.compute.internal:8081
+
+
+
 #commands used to debug, the problem was elsewhere though
 #docker run -p 8081:8081 alpinejavaswarm
 #docker container ls
