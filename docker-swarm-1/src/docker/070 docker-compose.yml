@@ -18,8 +18,10 @@ services:
   database:
     image: alpineh2database
     # just to expose the console in case we need any testing
-    ports: "8082:8082"
-    networks: webnet
+    ports:
+      - "8082:8082"
+    networks:
+      - webnet
 
   visualizer:
     image: dockersamples/visualizer:stable
