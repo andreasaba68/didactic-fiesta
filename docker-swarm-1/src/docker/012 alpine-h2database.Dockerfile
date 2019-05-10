@@ -1,6 +1,6 @@
 FROM alpinejava:latest
 
-ADD ./h2/bin/h2*.jar /home/docker
+ADD ./h2/bin/h2*.jar /home/docker/.
 
 #exposes the web server port to allow testing
 EXPOSE 8082
