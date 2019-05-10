@@ -23,12 +23,9 @@ services:
 
   visualizer:
     image: dockersamples/visualizer:stable
-    ports:
-      - "8080:8080"
-    deploy:
-      replicas: 0
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
+    ports: "8080:8080"
+    deploy: replicas: 0
+    volumes: "/var/run/docker.sock:/var/run/docker.sock"
     deploy:
       placement:
         constraints: [node.role == manager]
