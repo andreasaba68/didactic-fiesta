@@ -8,7 +8,7 @@ git pull
 docker image build . --tag alpinejava --file './src/docker/010 alpine-java.Dockerfile'
 
 #wget http://www.h2database.com/h2-2019-03-13.zip
-#unzip ../h2-2019-03-13.zip h2*.jar
+#unzip h2-2019-03-13.zip h2*.jar
 docker image build . --tag alpineh2database --file './src/docker/012 alpine-h2database.Dockerfile'
 
 # *** Creating the deployment image
