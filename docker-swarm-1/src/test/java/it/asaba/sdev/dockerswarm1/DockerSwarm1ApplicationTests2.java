@@ -2,12 +2,24 @@ package it.asaba.sdev.dockerswarm1;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.util.Set;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.gargoylesoftware.htmlunit.Page;
+import com.gargoylesoftware.htmlunit.WebClient;
 
 /**
  * e.g. -DbaseUrl=http://127.0.0.1:8081
@@ -79,6 +91,62 @@ public class DockerSwarm1ApplicationTests2 {
 
     // session must be different anyway (checking the memory address)
     assertNotEquals(h3,driverS2.findElement(By.cssSelector("h3")).getText());
+
+  }
+
+  @Test
+  public void checkLoadBalancerBalances2() throws FailingHttpStatusCodeException, MalformedURLException, IOException, Exception {
+
+    try (WebClient webClient = new WebClient()) {
+      // webClient.addRequestHeader("Connection", "close");
+
+      String testString = System.currentTimeMillis()+"@test";
+
+      String h1a= findByElement("h1",webClient.getPage(baseUrl + "/session/write?test="+testString).getWebResponse().getContentAsString());
+      System.out.println("ANDREAS: "+webClient.getCookieManager().getCookie("JSESSIONID").getValue());
+      com.gargoylesoftware.htmlunit.util.Cookie cookie = webClient.getCookieManager().getCookie("JSESSIONID");
+
+      for (int i = 0; i < 10; i++) {
+        // reads from session 1 but expects to fall on the other instance/container so not to be the same session id and server
+        // webClient.getWebConnection().close();
+
+        String h1b= findByElement("h1",webClient.getPage(baseUrl+ "/session/read").getWebResponse().getContentAsString());
+        System.out.println("ANDREAS: "+webClient.getCookieManager().getCookie("JSESSIONID").getValue());
+
+        if (!h1a.equals(h1b))
+            return;
+      }
+
+      // none of the 10 has been balanced ? really ????
+      assertTrue(false);
+    }
+
+  }
+
+  private static String findByElement(String element, String page) {
+    int pos= page.indexOf("<"+element+">");
+    int pos2= page.indexOf("</"+element+">",pos);
+    return page.substring(pos+element.length()+2, pos2);
+  }
+
+  @Test
+  public void checkLoadBalancerBalances() {
+    HtmlUnitDriver driver = new HtmlUnitDriver();
+    String testString = System.currentTimeMillis()+"@test";
+
+    test0(driver,testString); // writes s to session
+    String h1= driver.findElement(By.cssSelector("h1")).getText();
+
+    for (int i = 0; i < 10; i++) {
+      // reads from session 1 but expects to fall on the other instance/container so not to be the same session id and server
+      driver.get(baseUrl + "/session/read");
+
+      if (!h1.equals(driver.findElement(By.cssSelector("h1")).getText()))
+          return;
+    }
+
+    // none of the 10 has been balanced ? really ????
+    assertTrue(false);
 
   }
 

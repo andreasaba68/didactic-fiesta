@@ -1,6 +1,11 @@
 package it.asaba.sdev.dockerswarm1;
 
-public class SessionModel {
+import java.io.Serializable;
+
+public class SessionModel implements Serializable {
+
+  private static final long serialVersionUID = -1157779072918745074L;
+
   private String test= "";
   private String address;
   private String toString;
