@@ -96,22 +96,24 @@ public class DockerSwarm1ApplicationTests2 {
 
   @Test
   public void checkLoadBalancerBalances2() throws FailingHttpStatusCodeException, MalformedURLException, IOException, Exception {
+    String sessionId= "SESSION";
 
     try (WebClient webClient = new WebClient()) {
-      // webClient.addRequestHeader("Connection", "close");
+      webClient.addRequestHeader("Connection", "close");
 
       String testString = System.currentTimeMillis()+"@test";
 
-      String h1a= findByElement("h1",webClient.getPage(baseUrl + "/session/write?test="+testString).getWebResponse().getContentAsString());
-      System.out.println("ANDREAS: "+webClient.getCookieManager().getCookie("JSESSIONID").getValue());
-      com.gargoylesoftware.htmlunit.util.Cookie cookie = webClient.getCookieManager().getCookie("JSESSIONID");
+      Page p = webClient.getPage(baseUrl + "/session/write?test="+testString);
+      String h1a= findByElement("h1",p.getWebResponse().getContentAsString());
+      System.out.println("ANDREAS: "+webClient.getCookieManager().getCookie(sessionId).getValue());
+      com.gargoylesoftware.htmlunit.util.Cookie cookie = webClient.getCookieManager().getCookie(sessionId);
 
-      for (int i = 0; i < 10; i++) {
+      for (int i = 0; i < 2; i++) {
         // reads from session 1 but expects to fall on the other instance/container so not to be the same session id and server
-        // webClient.getWebConnection().close();
+        webClient.getWebConnection().close();
 
         String h1b= findByElement("h1",webClient.getPage(baseUrl+ "/session/read").getWebResponse().getContentAsString());
-        System.out.println("ANDREAS: "+webClient.getCookieManager().getCookie("JSESSIONID").getValue());
+        System.out.println("ANDREAS: "+webClient.getCookieManager().getCookie(sessionId).getValue());
 
         if (!h1a.equals(h1b))
             return;
