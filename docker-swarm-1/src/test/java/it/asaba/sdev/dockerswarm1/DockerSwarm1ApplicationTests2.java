@@ -42,12 +42,6 @@ public class DockerSwarm1ApplicationTests2 {
   }
 
   @Test
-  public void sillyTest() {
-    System.out.println("DockerSwarm1ApplicationTests2.sillyTest() getenv: "+System.getenv("test"));
-    System.out.println("DockerSwarm1ApplicationTests2.sillyTest() getProperty: "+System.getProperty("test"));
-  }
-
-  @Test
   public void concurrentSessionTest() {
     String testString1 = System.currentTimeMillis()+"@test1";
     String testString2 = System.currentTimeMillis()+"@test2";
@@ -84,7 +78,7 @@ public class DockerSwarm1ApplicationTests2 {
     driverS1.get(baseUrl + "/session/read");
 
     // on second node should be ... like ... empty string
-    assertNotEquals(h1, driverS1.findElement(By.cssSelector("h1")).getText());
+    assertEquals(h1, driverS1.findElement(By.cssSelector("h1")).getText());
 
     // ipaddress or server name must be different
     assertNotEquals(h2,driverS2.findElement(By.cssSelector("h2")).getText());
@@ -108,7 +102,7 @@ public class DockerSwarm1ApplicationTests2 {
       System.out.println("ANDREAS: "+webClient.getCookieManager().getCookie(sessionId).getValue());
       com.gargoylesoftware.htmlunit.util.Cookie cookie = webClient.getCookieManager().getCookie(sessionId);
 
-      for (int i = 0; i < 2; i++) {
+      for (int i = 0; i < 1; i++) {
         // reads from session 1 but expects to fall on the other instance/container so not to be the same session id and server
         webClient.getWebConnection().close();
 
