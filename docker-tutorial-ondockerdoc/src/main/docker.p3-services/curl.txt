@@ -1,0 +1,4 @@
+<h3>Hello World!</h3><b>Hostname:</b> 2bcc3236844b<br/><b>Visits:</b> <i>cannot connect to Redis, counter disabled</i>
+<h3>Hello World!</h3><b>Hostname:</b> 02e0bcc35cda<br/><b>Visits:</b> <i>cannot connect to Redis, counter disabled</i>
+<h3>Hello World!</h3><b>Hostname:</b> 4a97a812d8d1<br/><b>Visits:</b> <i>cannot connect to Redis, counter disabled</i>
+<h3>Hello World!</h3><b>Hostname:</b> 2bcc3236844b<br/><b>Visits:</b> <i>cannot connect to Redis, counter disabled</i>

@@ -1,0 +1,50 @@
+ID                  NAME                      IMAGE                         NODE                DESIRED STATE       CURRENT STATE                 ERROR                       PORTS
+
+wem3d53oi99u        getstartedlab_web.1       andresaba/get-started:part2   alpine-vbox         Running             Running 38 seconds ago
+nxa0wd5tk997         \_ getstartedlab_web.1   username/repo:tag             alpine-vbox         Shutdown            Failed about a minute ago     "task: non-zero exit (2)"
+
+zt2v88vi0f0b        getstartedlab_web.2       andresaba/get-started:part2   alpine-vbox         Running             Running 38 seconds ago
+33eid368isyv         \_ getstartedlab_web.2   username/repo:tag             alpine-vbox         Shutdown            Shutdown about a minute ago
+
+5e9r817u930j        getstartedlab_web.3       andresaba/get-started:part2   alpine-vbox         Running             Running 39 seconds ago
+pvn61vg30net         \_ getstartedlab_web.3   username/repo:tag             alpine-vbox         Shutdown            Failed about a minute ago     "task: non-zero exit (2)"
+
+zs4js8fu8ysx        getstartedlab_web.4       andresaba/get-started:part2   alpine-vbox         Running             Running 45 seconds ago
+br805ftffr8j         \_ getstartedlab_web.4   username/repo:tag             alpine-vbox         Shutdown            Failed 2 minutes ago          "task: non-zero exit (2)"
+
+dskgaefub3gc        getstartedlab_web.5       andresaba/get-started:part2   alpine-vbox         Running             Running 45 seconds ago
+up0plfpeqiq5         \_ getstartedlab_web.5   username/repo:tag             alpine-vbox         Shutdown            Failed about a minute ago     "task: non-zero exit (2)"
+
+
+ID                  NAME                      IMAGE                         NODE                DESIRED STATE       CURRENT STATE                 ERROR                       PORTS
+wem3d53oi99u        getstartedlab_web.1       andresaba/get-started:part2   alpine-vbox         Running             Running about a minute ago
+nxa0wd5tk997         \_ getstartedlab_web.1   username/repo:tag             alpine-vbox         Shutdown            Failed 2 minutes ago          "task: non-zero exit (2)"
+
+zt2v88vi0f0b        getstartedlab_web.2       andresaba/get-started:part2   alpine-vbox         Running             Running about a minute ago
+33eid368isyv         \_ getstartedlab_web.2   username/repo:tag             alpine-vbox         Shutdown            Shutdown about a minute ago
+
+5e9r817u930j        getstartedlab_web.3       andresaba/get-started:part2   alpine-vbox         Running             Running about a minute ago
+pvn61vg30net         \_ getstartedlab_web.3   username/repo:tag             alpine-vbox         Shutdown            Failed 2 minutes ago          "task: non-zero exit (2)"
+
+zs4js8fu8ysx        getstartedlab_web.4       andresaba/get-started:part2   alpine-vbox         Running             Running about a minute ago
+br805ftffr8j         \_ getstartedlab_web.4   username/repo:tag             alpine-vbox         Shutdown            Failed 2 minutes ago          "task: non-zero exit (2)"
+
+dskgaefub3gc        getstartedlab_web.5       andresaba/get-started:part2   alpine-vbox         Running             Running about a minute ago
+up0plfpeqiq5         \_ getstartedlab_web.5   username/repo:tag             alpine-vbox         Shutdown            Failed 2 minutes ago          "task: non-zero exit (2)"
+
+
+ID                  NAME                      IMAGE                         NODE                DESIRED STATE       CURRENT STATE            ERROR                       PORTS
+wem3d53oi99u        getstartedlab_web.1       andresaba/get-started:part2   alpine-vbox         Running             Running 2 minutes ago
+nxa0wd5tk997         \_ getstartedlab_web.1   username/repo:tag             alpine-vbox         Shutdown            Failed 3 minutes ago     "task: non-zero exit (2)"
+
+zt2v88vi0f0b        getstartedlab_web.2       andresaba/get-started:part2   alpine-vbox         Running             Running 2 minutes ago
+33eid368isyv         \_ getstartedlab_web.2   username/repo:tag             alpine-vbox         Shutdown            Shutdown 2 minutes ago
+
+5e9r817u930j        getstartedlab_web.3       andresaba/get-started:part2   alpine-vbox         Running             Running 2 minutes ago
+pvn61vg30net         \_ getstartedlab_web.3   username/repo:tag             alpine-vbox         Shutdown            Failed 3 minutes ago     "task: non-zero exit (2)"
+
+zs4js8fu8ysx        getstartedlab_web.4       andresaba/get-started:part2   alpine-vbox         Running             Running 2 minutes ago
+br805ftffr8j         \_ getstartedlab_web.4   username/repo:tag             alpine-vbox         Shutdown            Failed 3 minutes ago     "task: non-zero exit (2)"
+
+dskgaefub3gc        getstartedlab_web.5       andresaba/get-started:part2   alpine-vbox         Running             Running 2 minutes ago
+up0plfpeqiq5         \_ getstartedlab_web.5   username/repo:tag             alpine-vbox         Shutdown            Failed 3 minutes ago     "task: non-zero exit (2)"
